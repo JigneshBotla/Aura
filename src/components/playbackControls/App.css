@@ -54,15 +54,17 @@
 }
 
 .lyrics-like-container {
+  width: fit-content;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   gap: 11em; /* Space between Lyrics and Like buttons */
   margin: 1em 0; /* Vertical space above (from singer) and below (to controls) */
 }
 
 .control-btn {
-  background-color: #1a1a1a;
+  background-color: #000;
   color: #fff;
   border: none;
   padding: 0.5em 1em;
@@ -86,12 +88,12 @@
 
 .volume-slider {
   width: 100px;
-  accent-color: #1dce5e;
+  accent-color: #000;
 }
 
 .lyrics-container {
   padding: 1em;
-  background-color: rgba(26, 26, 26, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   max-width: 400px;
   text-align: left;
@@ -175,7 +177,7 @@
 
 .progress {
   height: 100%;
-  background-color: #1dce5e; /* Green fill matching your theme */
+  background-color: #0b0b0b; /* Green fill matching your theme */
   border-radius: 5px;
   transition: width 0.3s ease-in-out; /* Smooth animation */
 }
@@ -195,7 +197,7 @@
 
 .volume-slider {
   width: 100px;
-  accent-color: #1dce5e;
+  accent-color: #fff;
 }
 
 /* Add these new styles */
@@ -209,7 +211,7 @@
   left: calc(100% + 5px); /* Adds a small gap to the right of the button */
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(26, 26, 26, 0.9);
+  background-color: #000000;
   padding: 10px;
   border-radius: 10px;
   opacity: 0;

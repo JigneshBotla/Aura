@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Fullscreen Setup */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: black !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow: hidden !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Root Element */
+#root {
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: black !important;
+}
+
+/* Container for Background and Content */
+.emotion-selection-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Aurora Background */
+.emotion-selection-container > div:first-child { /* Targets Aurora component */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Behind content */
+}
+
+/* Emotion Selection Content */
+.emotion-selection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  z-index: 2; /* Above Aurora */
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+/* Layout for Emotion & Genre */
+.selections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 600px) {
+  .selections {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+/* Section Styling */
+.emotion-section, .genre-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section Headings */
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Increased gap between Emotion & Genre */
+.emotion-section {
+  margin-bottom: 20px;
+}
+
+/* List Containers */
+.emotion-list, .genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Emotion Items */
+.emotion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emotion-item .emoji {
+  font-size: 2.5rem;
+}
+
+.emotion-item .name {
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.emotion-item.selected {
+  border-color: var(--emotion-color);
+  box-shadow: 0 0 12px var(--emotion-color);
+}
+
+.emotion-item:hover {
+  transform: scale(1.1);
+}
+
+/* Genre Items */
+.genre-item {
+  padding: 18px 35px;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.genre-item.selected {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+.genre-item:hover {
+  transform: scale(1.05);
+}
+
+/* Generate Button */
+.generate-button {
+  color: white;
+  background-color: transparent;
+  padding: 22px 40px;
+  border-radius: 35px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.generate-button:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+.generate-button:disabled {
+  display: none;
+}
+
+/* Back Button */
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* About Nav */
+.about-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 3; /* Above both Aurora and content */
+}

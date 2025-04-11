@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap");
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Fira Code", monospace;
-    color: white;
-}
-
 .profile-container {
   position: relative;
   height: 100vh;
@@ -60,8 +52,6 @@
     padding-left: 5%;
     padding-right: 5%;
     cursor: pointer;
-    font-family: "Fira Code", monospace;
-    color: white;
 }
 
 .back-button {
@@ -74,8 +64,6 @@
     background: none;
     border: none;
     cursor: pointer;
-    font-family: "Fira Code", monospace;
-    color: white;
 }
 
 .profile-data-container {
@@ -105,8 +93,6 @@
 .display-name {
     font-size: 3rem;
     margin: 0.8rem;
-    font-family: "Fira Code", monospace;
-    color: white;
 }
 
 .email,
@@ -115,14 +101,13 @@
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0.625rem;
-    font-family: "Fira Code", monospace;
-    color: white;
 }
 
 .info-section {
     width: 50vw;
     display: flex;
     flex-direction: column;
+    /* justify-content: space-around; */
     align-items: center;
     margin: 1.875rem;
 }
@@ -142,8 +127,6 @@
 h3 {
     margin: 0.625rem;
     font-size: 3rem;
-    font-family: "Fira Code", monospace;
-    color: white;
 }
 
 ul {
@@ -155,22 +138,16 @@ li {
     font-size: 1.5rem;
     font-weight: 700;
     margin-top: 0.313rem;
-    font-family: "Fira Code", monospace;
-    color: white;
 }
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 1200px) {
     .display-name {
         font-size: 3rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
     
     h3 {
         font-size: 2.5rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
 }
 
@@ -178,14 +155,10 @@ li {
     .nav-title {
         padding-left: 3%;
         padding-right: 3%;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
     
     .display-name {
         font-size: 2.5rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
 
     .profile-pic {
@@ -194,8 +167,6 @@ li {
     
     h3 {
         font-size: 2rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
 }
 
@@ -214,8 +185,6 @@ li {
         font-size: 1.2rem;
         padding-left: 1rem;
         padding-right: 1rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
 
     .profile-pic {
@@ -224,20 +193,14 @@ li {
 
     .display-name {
         font-size: 2rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
     
     .email, .followers, .list-items, li {
         font-size: 1.2rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
     
     h3 {
         font-size: 1.8rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
 }
 
@@ -252,20 +215,14 @@ li {
     
     .display-name {
         font-size: 1.8rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
     
     h3 {
         font-size: 1.5rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
     
     .email, .followers, .list-items, li {
         font-size: 1rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
 }
 
@@ -276,13 +233,9 @@ li {
     
     .display-name {
         font-size: 1.5rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
     
     h3 {
         font-size: 1.3rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
 }

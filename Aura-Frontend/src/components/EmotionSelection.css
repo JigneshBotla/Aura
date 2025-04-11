@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 /* Global styles for consistency with Home.css */
 * {
@@ -59,6 +59,7 @@ body {
   align-items: center;
   text-align: center;
   z-index: 2;
+
   color: white;
 }
 
@@ -68,8 +69,6 @@ h1 {
   margin-bottom: 30px;
   margin: 0;
   padding: 0;
-  font-family: "Fira Code", monospace;
-  color: white;
 }
 
 p {
@@ -78,8 +77,6 @@ p {
   font-weight: 600;
   margin-bottom: 40px;
   z-index: 2;
-  font-family: "Fira Code", monospace;
-  color: white;
 }
 
 .selections {
@@ -109,8 +106,6 @@ p {
 h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  font-family: "Fira Code", monospace;
-  color: white;
 }
 
 .emotion-section {
@@ -145,8 +140,6 @@ h3 {
 .emotion-item .name {
   font-size: 0.95rem;
   margin-top: 8px;
-  font-family: "Fira Code", monospace;
-  color: white;
 }
 
 .emotion-item.selected {
@@ -165,15 +158,12 @@ h3 {
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: "Fira Code", monospace;
-  color: white;
 }
 
 .genre-item.selected {
   background-color: white;
   color: black;
   border-color: white;
-  font-family: "Fira Code", monospace;
 }
 
 .genre-item:hover {
@@ -193,7 +183,6 @@ h3 {
   display: flex;
   justify-content: center;
   gap: 20px;
-  font-family: "Fira Code", monospace;
 }
 
 .generate-button:hover {
@@ -206,12 +195,10 @@ h3 {
 }
 
 .select-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0;
-  cursor: pointer;
-  font-family: "Fira Code", monospace;
-  color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer;
 } 
 
 .about-nav {
@@ -238,6 +225,4 @@ h3 {
 
 .recommendations li {
   margin-bottom: 10px;
-  font-family: "Fira Code", monospace;
-  color: white;
 }

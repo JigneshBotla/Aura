@@ -47,10 +47,7 @@ body {
     font-weight: bold;
     margin: 0;
     cursor: pointer;
-    font-family: "Fira Code", monospace;
-    color: white;
 }
-
 /* Centered About content styling */
 .about-content {
     position: relative;
@@ -71,16 +68,12 @@ body {
     font-size: 1.8rem;
     margin-bottom: 20px;
     text-transform: uppercase;
-    font-family: "Fira Code", monospace;
-    color: white;
 }
 
 .about-content p {
     font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 15px;
-    font-family: "Fira Code", monospace;
-    color: white;
 }
 
 @media (max-width: 768px) {
@@ -89,22 +82,17 @@ body {
         width: 95%;
     }
 
+
     .library-title {
         font-size: 1.2rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
 
     .about-content h2 {
         font-size: 1.5rem;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
 
     .about-content p {
         font-size: 1rem;
         line-height: 1.4;
-        font-family: "Fira Code", monospace;
-        color: white;
     }
 }

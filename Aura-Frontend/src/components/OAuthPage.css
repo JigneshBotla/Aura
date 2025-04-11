@@ -46,6 +46,7 @@ html {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 2px;
+    font-family: "Fira Code", monospace;
 }
 
 .aura-title {
@@ -61,6 +62,7 @@ html {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 15px;
+    font-family: "Fira Code", monospace;
 }
 
 .spotify-button {
@@ -75,6 +77,7 @@ html {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    font-family: "Fira Code", monospace;
 }
 
 .spotify-button:hover {

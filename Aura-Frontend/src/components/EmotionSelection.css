@@ -1,84 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap");
 
-/* Global Reset */
+/* Global styles for consistency with Home.css */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: none;
-  outline: none;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
+  color: white;
 }
 
-/* Fullscreen Setup */
-html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  background-color: black !important;
-  height: 100vh !important;
-  width: 100vw !important;
-  overflow: hidden !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Root Element */
-#root {
-  height: 100% !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background-color: black !important;
-}
-
-/* Container for Background and Content */
-.emotion-selection-container {
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   position: relative;
-  width: 100%;
-  height: 100%;
+}
+
+.emotion-selection-container {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: black;
   overflow: hidden;
 }
 
-/* Aurora Background */
-.emotion-selection-container > div:first-child { /* Targets Aurora component */
+.emotion-selection-container > div:first-child { 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Behind content */
+  z-index: 1;
 }
 
-/* Emotion Selection Content */
+.emotion-selection-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .emotion-selection {
-  position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
-  z-index: 2; /* Above Aurora */
+  text-align: center;
+  z-index: 2;
+  color: white;
 }
 
-/* Headings */
 h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 30px;
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code", monospace;
+  color: white;
 }
 
 p {
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 40px;
+  z-index: 2;
+  font-family: "Fira Code", monospace;
+  color: white;
 }
 
-/* Layout for Emotion & Genre */
 .selections {
   display: flex;
   flex-direction: row;
@@ -86,6 +89,7 @@ p {
   width: 100%;
   max-width: 900px;
   margin-bottom: 80px;
+  z-index: 2;
 }
 
 @media (max-width: 600px) {
@@ -96,25 +100,24 @@ p {
   }
 }
 
-/* Section Styling */
 .emotion-section, .genre-section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Section Headings */
 h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
+  font-family: "Fira Code", monospace;
+  color: white;
 }
 
-/* Increased gap between Emotion & Genre */
 .emotion-section {
+  max-width: 450px;
   margin-bottom: 20px;
 }
 
-/* List Containers */
 .emotion-list, .genre-list {
   display: flex;
   flex-wrap: wrap;
@@ -122,7 +125,6 @@ h3 {
   gap: 30px;
 }
 
-/* Emotion Items */
 .emotion-item {
   display: flex;
   flex-direction: column;
@@ -143,6 +145,8 @@ h3 {
 .emotion-item .name {
   font-size: 0.95rem;
   margin-top: 8px;
+  font-family: "Fira Code", monospace;
+  color: white;
 }
 
 .emotion-item.selected {
@@ -154,7 +158,6 @@ h3 {
   transform: scale(1.1);
 }
 
-/* Genre Items */
 .genre-item {
   padding: 18px 35px;
   font-size: 1.2rem;
@@ -162,19 +165,21 @@ h3 {
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: "Fira Code", monospace;
+  color: white;
 }
 
 .genre-item.selected {
   background-color: white;
   color: black;
   border-color: white;
+  font-family: "Fira Code", monospace;
 }
 
 .genre-item:hover {
   transform: scale(1.05);
 }
 
-/* Generate Button */
 .generate-button {
   color: white;
   background-color: transparent;
@@ -188,6 +193,7 @@ h3 {
   display: flex;
   justify-content: center;
   gap: 20px;
+  font-family: "Fira Code", monospace;
 }
 
 .generate-button:hover {
@@ -199,24 +205,39 @@ h3 {
   display: none;
 }
 
-/* Back Button */
-.back-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
+.select-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
   cursor: pointer;
-}
+  font-family: "Fira Code", monospace;
+  color: white;
+} 
 
-/* About Nav */
 .about-nav {
   position: absolute;
   top: 0;
   width: 100%;
   display: flex;
-  max-width: 1200px;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
-  z-index: 3; /* Above both Aurora and content */
+  z-index: 3;
+}
+
+.recommendations {
+  margin-top: 20px;
+  text-align: left;
+  color: white;
+}
+
+.recommendations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendations li {
+  margin-bottom: 10px;
+  font-family: "Fira Code", monospace;
+  color: white;
 }

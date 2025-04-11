@@ -40,8 +40,8 @@
   transition: all 0.3s ease;
   font-weight: 600;
   z-index: 2;
+  font-family: "Fira Code", monospace;
 }
-
 
 .header {
   display: flex;
@@ -75,12 +75,15 @@
   color: #ffffff;
   margin-bottom: 5px;
   font-weight: 600;
+  font-family: "Fira Code", monospace;
 }
 
 .header .playlist-info h1 {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 10px;
+  color: #ffffff;
+  font-family: "Fira Code", monospace;
 }
 
 .playlist-controls {
@@ -98,6 +101,7 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   font-weight: 600;
+  font-family: "Fira Code", monospace;
 }
 
 .control-button:hover {
@@ -108,6 +112,7 @@
 .header .playlist-info p {
   font-size: 0.9rem;
   color: #ffffff;
+  font-family: "Fira Code", monospace;
 }
 
 /* Song List */
@@ -125,6 +130,7 @@
   text-align: left;
   color: #ffffff;
   font-size: 0.9rem;
+  font-family: "Fira Code", monospace;
 }
 
 .song-list tr {
@@ -193,11 +199,13 @@
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 500;
+  font-family: "Fira Code", monospace;
 }
 
 .song-info .artist {
   color: #ffffff;
   font-size: 0.9rem;
+  font-family: "Fira Code", monospace;
 }
 
 /* Playback Bar */
@@ -209,11 +217,13 @@
   padding: 10px;
   text-align: center;
   color: #ffffff;
+  font-family: "Fira Code", monospace;
 }
 
 button {
   all: unset; /* Reset any global button styles */
   cursor: pointer; /* Ensure buttons have a pointer cursor */
+  font-family: "Fira Code", monospace;
 }
 
 /* Responsive Design */
@@ -229,5 +239,6 @@ button {
 
   .song-list td {
     font-size: 0.8rem;
+    font-family: "Fira Code", monospace;
   }
 }

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap");
+
 .App {
   background-color: #000;
   min-height: 100vh;
@@ -6,7 +8,7 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-family: 'Fira Code', sans-serif;
+  font-family: "Fira Code", monospace;
   position: relative;
   overflow: hidden;
   overflow-y: hidden; /* Prevent scroll in normal view */
@@ -53,7 +55,6 @@
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 1rem;
 }
 
 .track-title {
@@ -62,13 +63,16 @@
   margin: 0;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Fira Code", monospace;
+  color: #fff;
 }
 
 .track-artist {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #fff;
-  margin: 0.2rem 0 1.5rem;
+  margin: 0.1rem 0 0.1rem;
   text-align: center;
+  font-family: "Fira Code", monospace;
 }
 
 .lyrics-like-container {
@@ -76,7 +80,6 @@
   justify-content: space-between;
   gap: 0.8rem;
   width: 100%;
-  margin-bottom: 0.7rem;
 }
 
 .lyrics-btn {
@@ -87,6 +90,7 @@
   font-weight: 600;
   cursor: pointer;
   padding: 0.5rem 1rem;
+  font-family: "Fira Code", monospace;
 }
 
 .lyrics-like-container .control-btn {
@@ -100,6 +104,7 @@
   font-weight: 600;
   cursor: pointer;
   padding: 0.5rem 1rem;
+  font-family: "Fira Code", monospace;
 }
 
 .time-bar-container {
@@ -107,7 +112,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 1.5rem;
   position: relative;
 }
 
@@ -116,17 +120,37 @@
   font-size: 0.8rem;
   color: #fff;
   position: relative;
+  margin: 0 10px;
+  font-family: "Fira Code", monospace;
 }
 
+/* Updated progress bar styling with filled effect */
 .progress-bar {
   width: 300px; /* Match design */
   height: 5px;
   background-color: rgba(255, 255, 255, 0.3);
   margin: 0 auto;
-  border-radius: 1px;
+  border-radius: 5px;
   appearance: none;
   outline: none;
   border: none;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; /* Important to contain the pseudo-element */
+}
+
+/* Create the fill effect with a pseudo-element */
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--progress-percent, 0%);
+  background-color: #fff;
+  pointer-events: none;
+  z-index: -1;
+  transition: width 0.1s linear;
 }
 
 .progress-bar::-webkit-slider-thumb {
@@ -136,6 +160,19 @@
   background: #fff;
   border-radius: 50%;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.progress-bar::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  z-index: 2;
 }
 
 .controls {
@@ -158,7 +195,7 @@
   color: #fff;
   width: 400px; /* Fixed width for lyrics */
   height: auto;
-  max-height: 700px;
+  max-height: 588.8px;
   padding: 1rem 2rem;
   overflow-y: auto;
   text-align: left; /* Align lyrics to the left */
@@ -171,8 +208,9 @@
 
 .lyrics-container pre {
   white-space: pre-wrap;
-  font-family: 'Fira Code', sans-serif;
-  font-size: 0.9rem;
+  font-family: "Fira Code", monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
   line-height: 1.5;
   margin: 0;
   text-align: center;
@@ -181,6 +219,8 @@
 .searching-lyrics {
   text-align: center;
   font-size: 0.9rem;
+  font-family: "Fira Code", monospace;
+  color: #fff;
 }
 
 .volume-slider-wrapper {
@@ -232,6 +272,8 @@
 .queue-overlay h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
+  font-family: "Fira Code", monospace;
+  color: #fff;
 }
 
 .queue-overlay ul {
@@ -269,11 +311,14 @@
 .queue-track-title {
   font-size: 0.9rem;
   font-weight: bold;
+  font-family: "Fira Code", monospace;
+  color: #fff;
 }
 
 .queue-track-artist {
   font-size: 0.8rem;
   color: #ccc;
+  font-family: "Fira Code", monospace;
 }
 
 .close-queue-btn {
@@ -284,10 +329,19 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 4px;
   cursor: pointer;
+  font-family: "Fira Code", monospace;
 }
 
 .player-container:not(.lyrics-active) .controls-wrapper {
   margin: 0 auto;
+}
+
+.one-line {
+  display: block; /* Ensure the element is block-level */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
 }
 
 @media (max-width: 768px) {

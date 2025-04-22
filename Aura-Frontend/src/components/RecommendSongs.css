@@ -38,9 +38,9 @@ font-size: 0.8rem;
 }
 
 .song-image-container {
-position: relative;
-display: inline-block;
-cursor: pointer;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .song-image {
@@ -123,18 +123,18 @@ color: white;
 }
 
 .grid-container {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-gap: 20px;
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
-z-index: 2; /* Ensure it stays above the Aurora background */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2; /* Ensure it stays above the Aurora background */
 }
 
 .track-card {
-width: 200px;
-text-align: center;
+  width: 200px;
+  text-align: center;
 }
 
 .track-info {
@@ -143,29 +143,29 @@ z-index: 2; /* Ensure text stays above the Aurora background */
 }
 
 .about-nav {
-display: flex;
-justify-content: space-between;
-padding: 20px;
-z-index: 10;
-position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 10;
+  position: relative;
 }
 
 @media (max-width: 768px) {
-.select_title, .select-title {
-  font-size: 1rem;
-}
+  .select_title, .select-title {
+    font-size: 1rem;
+  }
 
-.statement {
-  font-size: 1.2rem;
-}
+  .statement {
+    font-size: 1.2rem;
+  }
 
-.track-card {
-  width: 150px;
-}
+  .track-card {
+    width: 150px;
+  }
 
-.grid-container {
-  gap: 15px;
-}
+  .grid-container {
+    gap: 15px;
+  }
 
 .action-buttons {
   flex-direction: column;
